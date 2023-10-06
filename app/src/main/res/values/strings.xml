@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Foodu</string>
+
+    <string name="tab_home">Home</string>
+    <string name="tab_orders">ORDERS</string>
+    <string name="tab_message">MESSAGE</string>
+    <string name="tab_ewallet">E-WALLET</string>
+    <string name="tab_profile">PROFILE</string>
+
+</resources>
