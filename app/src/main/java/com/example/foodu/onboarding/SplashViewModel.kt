@@ -26,7 +26,7 @@ class SplashViewModel
         viewModelScope.launch {
             repository.readOnBoardingState().collect{completed ->
                 if (completed){
-                    _startDestination.value = FooduRoutes.HOME
+                    _startDestination.value = FooduRoutes.SIGNIN
                 }else{
                     _startDestination.value = FooduRoutes.WELCOME
                 }

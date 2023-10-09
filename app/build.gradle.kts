@@ -50,6 +50,7 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
 }
 
 kapt {
@@ -91,4 +92,8 @@ dependencies {
 
     //navigation compose
     implementation("androidx.navigation:navigation-compose:2.7.4")
+
+    //joel kanyi's country picker
+//    implementation("com.github.JoelKanyi:KomposeCountryCodePicker:1.0.5")
+//    implementation ("com.github.codewith-fun:Country-Code-picker:0.1.1")
 }

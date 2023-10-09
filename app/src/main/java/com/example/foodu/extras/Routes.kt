@@ -11,6 +11,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import com.example.foodu.R
 
 object FooduRoutes{
+    const val SIGNIN = "signin"
+    const val CREATENEWACCOUNT = "createNewAccount"
+    const val SIGNUP = "signup"
     const val HOME = "home"
     const val ORDERS = "orders"
     const val MESSAGE = "messages"

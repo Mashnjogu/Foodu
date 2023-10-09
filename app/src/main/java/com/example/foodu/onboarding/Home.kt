@@ -10,6 +10,6 @@ fun Home(
     navController: NavController
 ){
     Column {
-        Text(text = "Home")
+        Text(text = "Home Boyz Radio")
     }
 }

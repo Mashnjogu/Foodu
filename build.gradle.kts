@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.resolve.redundantTargetMap
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
@@ -6,4 +8,7 @@ plugins {
 
     id("com.google.dagger.hilt.android") version "2.48.1" apply false
 }
+
 true // Needed to make the Suppress annotation work for the plugins block
+
+

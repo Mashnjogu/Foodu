@@ -34,7 +34,6 @@ import com.google.accompanist.pager.*
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.PagerState
 
-
 @ExperimentalAnimationApi
 @ExperimentalPagerApi
 @Composable
@@ -74,7 +73,7 @@ fun WelcomeScreen(
         ) {
             welcomeViewModel.saveOnBoardingState(completed = true)
             navController.popBackStack()
-            navController.navigate(FooduRoutes.HOME)
+            navController.navigate(FooduRoutes.SIGNIN)
         }
         
     }
@@ -138,7 +137,7 @@ fun FinishButton(
 //                    contentColor = Color.White
 //                )
             ) {
-                Text(text = "Finish")
+                Text(text = "Get Started")
             }
         }
     }

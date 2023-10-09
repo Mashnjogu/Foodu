@@ -15,7 +15,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.foodu.extras.FooduRoutes
+import com.example.foodu.onboarding.CreateNewAccount
 import com.example.foodu.onboarding.Home
+import com.example.foodu.onboarding.SignInPage
 import com.example.foodu.onboarding.WelcomeScreen
 import com.google.accompanist.pager.ExperimentalPagerApi
 
@@ -50,8 +52,15 @@ fun MainScreenNavigationComponents(
             WelcomeScreen(navHostController)
         }
 
+        composable(FooduRoutes.SIGNIN){
+            SignInPage(navHostController)
+        }
+
         composable(FooduRoutes.HOME){
             Home(navHostController)
+        }
+        composable(FooduRoutes.CREATENEWACCOUNT){
+            CreateNewAccount(navHostController)
         }
     }
 }

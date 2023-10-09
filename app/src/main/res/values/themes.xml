@@ -6,7 +6,7 @@
     <style name="Theme.CustomSplashScreenTheme" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/foodu_logo</item>
-        <item name="windowSplashScreenAnimationDuration">1200</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
         <item name="postSplashScreenTheme">@style/Theme.Foodu</item>
     </style>
 </resources>
