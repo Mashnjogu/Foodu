@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "390031160454",
+    "project_id": "foodu-12bab",
+    "storage_bucket": "foodu-12bab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390031160454:android:b2616ad6ae2b783c9d4d07",
+        "android_client_info": {
+          "package_name": "com.example.foodu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390031160454-s9panl1kjlfra81vucrccckp2vu9doun.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodu",
+            "certificate_hash": "c644bcdf16a99891c19cffc07664278dcb76dd1a"
+          }
+        },
+        {
+          "client_id": "390031160454-5ro6ahvr9hbb99coikt8spt6t0q71s2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEdQtEnYtuGg3VD_v6mhCS3V7wVWmnPsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390031160454-5ro6ahvr9hbb99coikt8spt6t0q71s2o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

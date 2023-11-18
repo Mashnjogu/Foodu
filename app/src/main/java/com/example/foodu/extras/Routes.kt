@@ -20,6 +20,9 @@ object FooduRoutes{
     const val EWALLET = "ewallet"
     const val PROFILE = "profile"
     const val WELCOME = "welcome"
+    const val LOGIN = "login"
+    const val VERIFICATION = "verification"
+    const val HAHA = "haha"
 }
 
 

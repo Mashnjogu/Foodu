@@ -1,59 +1,56 @@
 package com.example.foodu
 
+import android.app.Activity.RESULT_OK
+import android.util.Log
+import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.IntentSenderRequest
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.ui.Modifier
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.currentBackStackEntryAsState
-import androidx.navigation.compose.rememberNavController
 import com.example.foodu.extras.FooduRoutes
+import com.example.foodu.homescreens.Haha
 import com.example.foodu.onboarding.CreateNewAccount
 import com.example.foodu.onboarding.Home
 import com.example.foodu.onboarding.SignInPage
 import com.example.foodu.onboarding.WelcomeScreen
+import com.example.foodu.onboarding.LoginPage
+import com.example.foodu.onboarding.VerificationPage
 import com.google.accompanist.pager.ExperimentalPagerApi
-
-@Composable
-fun FooduAppContent(
-    modifier: Modifier = Modifier
-){
-    val selectedDestination = remember{ mutableStateOf(FooduRoutes.HOME) }
-    val navController = rememberNavController()
-    val backStackEntry = navController.currentBackStackEntryAsState()
-
-    Scaffold(
-        bottomBar = {
-
-        }
-    ){
-        Box(modifier = modifier.padding(it)){
-//            MainScreenNavigationComponents(paddingValues = it, navHostController = navController)
-        }
-    }
-}
+import com.google.android.gms.auth.api.identity.Identity
+import kotlinx.coroutines.launch
 
 
 @OptIn(ExperimentalAnimationApi::class, ExperimentalPagerApi::class)
 @Composable
 fun MainScreenNavigationComponents(
     startDestination: String,
-    navHostController: NavHostController
+    navHostController: NavHostController,
+    input: ActivityResultContracts.StartIntentSenderForResult
 ){
+
+
     NavHost(navController = navHostController, startDestination = startDestination){
         composable(FooduRoutes.WELCOME){
             WelcomeScreen(navHostController)
         }
 
         composable(FooduRoutes.SIGNIN){
-            SignInPage(navHostController)
+            SignInPage(
+                navHostController,
+                viewModel = ,
+                navigateToProfileScreen = {}
+            )
         }
 
         composable(FooduRoutes.HOME){
@@ -62,5 +59,15 @@ fun MainScreenNavigationComponents(
         composable(FooduRoutes.CREATENEWACCOUNT){
             CreateNewAccount(navHostController)
         }
+        composable(FooduRoutes.LOGIN){
+            LoginPage(navController = navHostController)
+        }
+        composable(FooduRoutes.VERIFICATION){
+            VerificationPage(navController = navHostController)
+        }
+        composable(FooduRoutes.HAHA){
+            Haha()
+        }
+
     }
 }

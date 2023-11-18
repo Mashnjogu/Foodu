@@ -1,6 +1,6 @@
 package com.example.foodu.onboarding
 
-import android.widget.Space
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -13,18 +13,26 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.foodu.R
 import com.example.foodu.extras.FooduRoutes
+import com.example.foodu.onboarding.signin.googlesignin.AuthViewModel
 
 @Composable
 fun SignInPage(
-    navController: NavController
+    navController: NavController,
+    viewModel: AuthViewModel = hiltViewModel(),
+    navigateToProfileScreen: () -> Unit
 ){
+
+
     Column(
         modifier = Modifier.padding(horizontal =12.dp)
     ){
@@ -49,10 +57,13 @@ fun SignInPage(
         Spacer(modifier = Modifier.height(8.dp))
         OutlinedButton(
             modifier = Modifier.fillMaxWidth(),
-            onClick = { /*TODO*/ }) {
+            onClick = {
+
+            }) {
             Text(text = "Continue with Google")
         }
         Spacer(modifier = Modifier.height(8.dp))
+
         OutlinedButton(
             modifier = Modifier.fillMaxWidth(),
             onClick = { /*TODO*/ }) {
@@ -67,7 +78,7 @@ fun SignInPage(
         Button(
             modifier = Modifier.fillMaxWidth(),
             onClick = {
-
+                navController.navigate(FooduRoutes.LOGIN)
             }) {
             Text("Sign In with Phone Number")
         }

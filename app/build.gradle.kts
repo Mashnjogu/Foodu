@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlinAndroid)
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -67,6 +68,9 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
+    implementation(libs.firebase.auth)
+    implementation(libs.play.services.auth)
+    implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -96,4 +100,9 @@ dependencies {
     //joel kanyi's country picker
 //    implementation("com.github.JoelKanyi:KomposeCountryCodePicker:1.0.5")
 //    implementation ("com.github.codewith-fun:Country-Code-picker:0.1.1")
+
+    //firebase bom
+    implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
+    //firebase analytics
+    implementation("com.google.firebase:firebase-analytics")
 }
